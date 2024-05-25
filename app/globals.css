@@ -1,33 +1,139 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700;900&display=swap");
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
+* {
+  box-sizing: border-box;
 }
 
 body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+  height: 100vh;
 }
 
-@layer utilities {
-  .text-balance {
-    text-wrap: balance;
-  }
+.section-padding {
+  @apply pb-[40px] md:pb-[120px] px-4 md:px-10;
+}
+
+.primary-button {
+  @apply bg-primary text-white text-sm leading-5 md:text-base font-medium text-center py-2 md:py-3 px-4 md:px-5 rounded;
+}
+
+.home-section-heading {
+  @apply font-medium text-xl  md:text-3xl leading-5 md:leading-10 text-secondary;
+}
+
+.home-section-heading-label {
+  @apply font-normal text-sm md:text-base leading-7 text-tertiary;
+}
+
+.project-card-data {
+  @apply text-sm leading-5 font-normal text-tertiary capitalize;
+}
+
+.project-card-label {
+  @apply text-sm leading-5 font-semibold  text-secondary;
+}
+
+.home-section-para {
+  @apply text-sm md:text-xl leading-5 md:leading-7 font-normal text-gray-600;
+}
+
+.navbar-shadow {
+  box-shadow: 0px 4px 6px 0px rgba(0, 0, 0, 0.15);
+}
+
+.buy-unit-headings {
+  @apply font-medium text-sm md:text-base lg:text-lg text-secondary;
+}
+
+.buy-unit-labels {
+  @apply font-normal text-sm lg:text-base text-secondary mb-3;
+}
+
+.lead-card-shadow {
+  box-shadow: 4px 4px 12px 0px rgba(122, 122, 122, 0.2);
+}
+
+.scrollbar-prop {
+  @apply scrollbar-thin scrollbar-thumb-primary scrollbar-track-transparent;
+}
+
+.grid-container {
+  @apply md:grid w-full md:grid-cols-2 lg:grid-cols-4   gap-14;
+}
+.home-section-button {
+  @apply text-sm md:text-lg px-2 md:px-4 py-1 md:py-2 transition-all delay-150 ease-in-out leading-6 rounded-md;
+}
+
+.podcast-link {
+  @apply p-4 flex justify-center items-center  rounded border-[0.5px] border-tertiary;
+}
+.project-details-table-head {
+  @apply text-tertiary text-sm leading-5 lg:text-lg lg:leading-6 w-[49%];
+}
+
+.project-details-table-value {
+  @apply font-medium text-sm leading-5 text-black lg:text-lg lg:leading-6 line-clamp-1 w-[49%] lg:w-[40%];
+}
+.project-details-table-row {
+  @apply py-3 flex justify-between items-center border-transparent border-b-black border-[1px];
+}
+.project-details-h3 {
+  @apply font-medium text-2xl text-primary lg:text-[40px] leading-8 lg:leading-[60px] text-left;
+}
+
+.project-details-p {
+  @apply font-light font-Poppins text-sm leading-[22.3px] text-tertiary lg:text-base lg:leading-[22.3px] w-full;
+}
+.tableData {
+  @apply font-Poppins font-normal text-secondary text-sm whitespace-normal break-words py-3;
+}
+
+.contact-us-p {
+  @apply text-sm leading-5 font-Poppins lg:text-xl lg:leading-8 text-black;
+}
+
+.project-details-heading {
+  @apply text-primary font-medium text-xl leading-6 lg:text-4xl lg:leading-[56px];
+}
+
+.project-details-sub-heading {
+  @apply text-sm leading-5 lg:text-base lg:leading-5 font-medium;
+}
+
+select.minimal {
+  background-image: linear-gradient(45deg, transparent 50%, gray 50%),
+    linear-gradient(135deg, gray 50%, transparent 50%),
+    linear-gradient(to right, #ccc, #ccc);
+  background-position: calc(100% - 20px) calc(1em + 2px),
+    calc(100% - 15px) calc(1em + 2px), calc(100% - 2.5em) 0.5em;
+  background-size: 5px 5px, 5px 5px, 1px 1.5em;
+  background-repeat: no-repeat;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+}
+
+select.minimal:focus {
+  background-image: linear-gradient(45deg, green 50%, transparent 50%),
+    linear-gradient(135deg, transparent 50%, green 50%),
+    linear-gradient(to right, #ccc, #ccc);
+  background-position: calc(100% - 15px) 1em, calc(100% - 20px) 1em,
+    calc(100% - 2.5em) 0.5em;
+  background-size: 5px 5px, 5px 5px, 1px 1.5em;
+  background-repeat: no-repeat;
+
+  outline: 0;
+}
+
+.project-shadow {
+  @apply rounded overflow-clip;
+  box-shadow: 0px 0px 8px 0px rgba(0, 0, 0, 0.4);
 }

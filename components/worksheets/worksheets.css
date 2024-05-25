@@ -1,0 +1,11 @@
+.worksheet_section_heading {
+  @apply font-normal mb-3 text-base text-secondary leading-6;
+}
+
+.worksheet_field_name {
+  @apply font-normal text-sm text-tertiary;
+}
+
+.worksheet_field_value {
+  @apply font-normal text-sm;
+}

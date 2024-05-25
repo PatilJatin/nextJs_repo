@@ -13,8 +13,23 @@ const config: Config = {
         "gradient-conic":
           "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
       },
+      colors: {
+        primary: " #1975B8",
+        "primary-400": "#DBEAF6",
+        secondary: "#1C1C1E",
+        tertiary: "#8C8C8C",
+        primaryBackground: "#F9FCFF",
+        "primary-red": "#E3363E",
+        "primary-green": "#3CAA3A",
+        "table-data": "#0C0C0C",
+        "primary-blue": "#1975B8",
+      },
+      fontFamily: {
+        Poppins: ["Poppins", "var(--font-poppins)"],
+        Lato: ["Lato", "Montserrat"],
+      },
     },
   },
-  plugins: [],
+  plugins: [require("tailwind-scrollbar")],
 };
 export default config;
